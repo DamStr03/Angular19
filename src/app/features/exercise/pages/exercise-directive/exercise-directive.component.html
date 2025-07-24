@@ -20,7 +20,6 @@
 				<li>photo</li>
 				<li>prix</li>
 				<li>prixPromo</li>
-				<li>moenPro</li>
 				<li>qttRestante</li>
 			</ul>
 		</div>
@@ -35,12 +34,33 @@
 			</ul>
 		</div>
 	</article>
+
 	<article class="card">
 		<div class="card-header">
 			<h2>Résultat:</h2>
 		</div>
 		<div class="card-body">
-			<!-- PLACER VOTRE CODE ICI!	-->
+			<!-- PLACER VOTRE CODE ICI! -->
+			<div class="liste-produits">
+				<div class="produit" *ngFor="let p of produits">
+					<img [src]="p.photo" [alt]="p.nom" class="photo" />
+
+					<h3>{{ p.nom }}</h3>
+
+					<div class="prix">
+						<ng-container *ngIf="p.prixPromo && p.prixPromo < p.prix; else normalPrice">
+							<span class="barre">{{ p.prix | currency: "EUR" }}</span>
+							<span class="promo">{{ p.prixPromo | currency: "EUR" }}</span>
+						</ng-container>
+						<ng-template #normalPrice>
+							<span>{{ p.prix | currency: "EUR" }}</span>
+						</ng-template>
+					</div>
+
+					<p *ngIf="p.qttRestant === 0" class="rupture">❌ Produit non disponible</p>
+					<p *ngIf="p.qttRestant > 0" class="stock">🟢 En stock : {{ p.qttRestant }}</p>
+				</div>
+			</div>
 		</div>
 	</article>
 </section>
