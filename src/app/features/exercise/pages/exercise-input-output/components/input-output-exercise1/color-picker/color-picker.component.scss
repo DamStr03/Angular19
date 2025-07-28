@@ -1,0 +1,37 @@
+p {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+
+select {
+	margin-left: 10px;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline-color: #007bff;
+	cursor: pointer;
+	transition: border-color 0.3s ease;
+}
+
+select:hover,
+select:focus {
+	border-color: #007bff;
+}
+
+button {
+	margin-left: 15px;
+	padding: 6px 15px;
+	font-size: 16px;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #0056b3;
+}

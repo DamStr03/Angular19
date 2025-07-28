@@ -1,0 +1,20 @@
+<div class="cadre">
+	<div class="up">
+		<div class="float-left">
+			<ng-content select=".up-left"></ng-content>
+		</div>
+		<div class="float-right">
+			<ng-content select=".up-right"></ng-content>
+		</div>
+	</div>
+	<ng-content select="img"></ng-content>
+	<div class="bottom">
+		<div class="float-left">
+			<ng-content select=".bottom-left"></ng-content>
+		</div>
+		<div class="float-right">
+			<ng-content select=".bottom-right"></ng-content>
+		</div>
+	</div>
+	<hr class="clear-float" />
+</div>

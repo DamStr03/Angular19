@@ -1,0 +1,10 @@
+<p>
+	Choisissez une couleur :
+	<select [(ngModel)]="colorPicked">
+		@for (color of possibleColors; track $index) {
+			<option [value]="color">{{ color }}</option>
+		}
+	</select>
+
+	<button (click)="onColorChanged()">Change color!</button>
+</p>

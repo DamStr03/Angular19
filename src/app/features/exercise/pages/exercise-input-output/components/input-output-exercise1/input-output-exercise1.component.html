@@ -28,7 +28,8 @@
 	</div>
 	<div class="card-body">
 		<!--	Place ton color picker ici!	-->
+		<color-picker [possibleColors]="colors" (colorUpdate)="onColorUpdate($event)"> </color-picker>
 
-		<p [style.color]="selectedColor">Selected color</p>
+		<p [style.color]="selectedColor">Couleur sélectionnée : {{ selectedColor || "aucune" }}</p>
 	</div>
 </article>

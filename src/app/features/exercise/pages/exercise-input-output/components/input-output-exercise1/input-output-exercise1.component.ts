@@ -1,11 +1,12 @@
 import {Component} from "@angular/core";
 import {SpoilComponent} from "@shared/components/spoil/spoil.component";
+import {ColorPickerComponent} from "@app/features/exercise/pages/exercise-input-output/components/input-output-exercise1/color-picker/color-picker.component";
 
 @Component({
 	selector: "input-output-exercise1",
-	imports: [SpoilComponent],
+	imports: [SpoilComponent, ColorPickerComponent],
 	templateUrl: "./input-output-exercise1.component.html",
-	styleUrl: "./input-output-exercise1.component.scss",
+	styleUrls: ["./input-output-exercise1.component.scss"],
 })
 export class InputOutputExercise1Component {
 	imgUrlResultat: string =
@@ -13,5 +14,10 @@ export class InputOutputExercise1Component {
 	imgUrlStructure: string =
 		"assets/exercise/input-output/color-picker-structure.png";
 
+	colors: string[] = ["Red", "Green", "Blue", "Yellow", "Purple"];
 	selectedColor: string = "red";
+
+	onColorUpdate(color: string) {
+		this.selectedColor = color;
+	}
 }

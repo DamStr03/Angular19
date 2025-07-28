@@ -1,0 +1,28 @@
+.up {
+	position: relative;
+	top: 12px;
+	z-index: 99;
+}
+
+.bottom {
+	position: relative;
+	bottom: 12px;
+	z-index: 99;
+}
+
+.float-left {
+	float: left;
+	position: relative;
+	left: -24px;
+}
+
+.float-right {
+	float: right;
+	position: relative;
+	right: -24px;
+}
+
+hr.clear-float {
+	clear: both;
+	border: 0;
+}
